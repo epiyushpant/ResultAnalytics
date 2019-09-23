@@ -1,0 +1,153 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script>
+      
+    </script>
+</head>
+<body>
+    <br />
+    <div class="row">
+        <div class="col-md-2">
+            <b>Graph Type</b>
+        </div>
+
+        <div class="col-md-4">
+            <select id="ddlReportType" class="form-control" data-bind="options: ReportTypes , optionsText:'ReportType', optionsValue:'Id', optionsCaption: '------SELECT------',value:SelectedReportType, event : {change : ChangeGraphType }"></select>
+        </div>
+
+
+        <div class="col-md-2">
+            <b>Batch</b>
+        </div>
+        <div class="col-md-4">
+            <select id="ddlBatch" class="form-control"
+                    data-bind="options:Batchs, optionsText:'Batch', optionsValue:'Batch', optionsCaption: '------SELECT------',value:SelectedBatch, event : { change :  ChangeBatch }"></select>
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+
+        <div class="col-md-2">
+            <b>Faculty</b>
+        </div>
+
+        <div class="col-md-4">
+
+
+
+            <select id="ddlFaculty" class="form-control"
+                    data-bind="options:Faculties, optionsText:'Faculty', optionsValue:'Faculty', optionsCaption: '------SELECT------',value:SelectedFaculty, event : { change : ChangeFaculty} "></select>
+        </div>
+
+        <div class="col-md-2">
+            <b>Category</b>
+        </div>
+
+
+        <div class="col-md-4">
+            <select id="ddlBatch" class="form-control"
+                    data-bind="options:Categories, optionsText:'Cat', optionsValue:'Cat', optionsCaption: '------SELECT------',value:SelectedCat, event : { change : ChangeCat } "></select>
+        </div>
+
+    </div>
+
+    <br />
+    <div class="row" id="divRoll">
+
+
+        <div class="col-md-2">
+            <b>Gender</b>
+        </div>
+
+        <div class="col-md-4">
+
+            <select id="ddlSem" class="form-control"
+                    data-bind="options:Genders, optionsText:'Gender', optionsValue:'Gender', optionsCaption: '------SELECT------',value:SelectedGender, event: {change : ChangeGender}"></select>
+        </div>
+
+
+        <div class="col-md-2">
+            <b>Rank</b>
+        </div>
+
+        <div class="col-md-4">
+
+            <select id="ddlSem" class="form-control"
+                    data-bind="options:Ranks, optionsText:'Rank', optionsValue:'Rank', optionsCaption: '------SELECT------',value:SelectedRank"></select>
+        </div>
+
+
+    </div>
+    <br />
+
+    <div class="row" id="divSemester">
+
+        <div class="col-md-2">
+            <b>Semester</b>
+        </div>
+
+        <div class="col-md-4">
+
+            <select id="ddlSem" class="form-control"
+                    data-bind="options:Semesters, optionsText:'Sem', optionsValue:'Sem', optionsCaption: '------SELECT------',value:SelectedSem"></select>
+        </div>
+
+        <div id="divSem2">
+            <div class="col-md-2">
+                <b>Semester</b>
+            </div>
+
+            <div class="col-md-4">
+
+                <select class="form-control"
+                        data-bind="options:Semesters, optionsText:'Sem', optionsValue:'Sem', optionsCaption: '------SELECT------',value:SelectedSem2"></select>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+
+
+
+    <div class="row">
+        <button type="button" class="btn-primary" data-bind="click: Search"> Search</button>
+        <button type="button" class="btn-primary" data-bind="click: Reset"> Reset</button>
+
+    </div>
+
+
+    <center><div id="chartContainer" style="height: 350px; width: 50%;"></div>  </center>
+    <div id="chartContainer1" style="height: 450px; width: 100%;"></div>
+    <button id="exportChart1" class="btn-primary">Export Chart</button>
+    <div id="chartContainer2" style="height: 450px; width: 100%;"></div>
+    <button id="exportChart2" class="btn-primary">Export Chart</button>
+    <div id="chartContainer3" style="height: 450px; width: 100%;"></div>
+    <button id="exportChart3" class="btn-primary">Export Chart</button>
+    <div id="chartContainer4" style="height: 850px; width: 100%;"></div>
+    <button id="exportChart4" class="btn-primary">Export Chart</button>
+    <div id="chartContainer5" style="height: 850px; width: 100%;"></div>
+    <button id="exportChart5" class="btn-primary">Export Chart</button>
+    <div id="chartContainer6" style="height: 850px; width: 100%;"></div>
+    <button id="exportChart6" class="btn-primary">Export Chart</button>
+
+
+    <br />
+    <br />
+
+
+    <script src="~/Scripts/canvasjs.min.js"></script>
+</body>
+</html>
+
+<script src="~/Scripts/knockout-3.5.0.js"></script>
+<script src="~/Scripts/ResultData/Graph.js"></script>

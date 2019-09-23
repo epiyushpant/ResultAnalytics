@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "GetExcel";
+}
+
+<h2>GetExcel</h2>
+
+@using System.Data
+@model DataTable
+@{
+    //Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ReadExcelFile</title>
+    <style>
+        table {
+            border: 1px solid #000000;
+            text-align: left;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+            table td, table th {
+                border: 1px solid #000000;
+                padding: 5px 4px;
+            }
+
+            table th {
+                background-color: #5396d2;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+    @using (Html.BeginForm("GetExcel", "Excel", FormMethod.Get, new { enctype = "multipart/form-data" }))
+    {
+
+        if (Model != null)
+        {
+
+            <table>
+                <tr>
+                    @for (int i = 0; i < Model.Columns.Count; i++)
+                    {
+                        <th>@Model.Columns[i].ColumnName</th>
+                    }
+                </tr>
+                @for (int i = 0; i < Model.Rows.Count; i++)
+                {
+                    <tr>
+                        @for (int j = 0; j < Model.Columns.Count; j++)
+                        {
+                            <td>@Model.Rows[i][j]</td>
+                        }
+                    </tr>
+                }
+            </table>
+        }
+
+        <div>
+
+        </div>
+    }
+</body>
+</html>

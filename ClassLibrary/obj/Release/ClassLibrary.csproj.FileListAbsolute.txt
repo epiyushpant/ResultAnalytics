@@ -1,0 +1,9 @@
+C:\Users\Piyush\source\repos\ClassLibrary\bin\Release\ClassLibrary.dll
+C:\Users\Piyush\source\repos\ClassLibrary\bin\Release\ClassLibrary.pdb
+C:\Users\Piyush\source\repos\ClassLibrary\bin\Release\Newtonsoft.Json.dll
+C:\Users\Piyush\source\repos\ClassLibrary\bin\Release\Newtonsoft.Json.xml
+C:\Users\Piyush\source\repos\ClassLibrary\obj\Release\ClassLibrary.csprojAssemblyReference.cache
+C:\Users\Piyush\source\repos\ClassLibrary\obj\Release\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Piyush\source\repos\ClassLibrary\obj\Release\ClassLibrary.csproj.CopyComplete
+C:\Users\Piyush\source\repos\ClassLibrary\obj\Release\ClassLibrary.dll
+C:\Users\Piyush\source\repos\ClassLibrary\obj\Release\ClassLibrary.pdb
